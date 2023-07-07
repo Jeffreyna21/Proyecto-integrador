@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <conio.h>
+
+int main() {
+    int m,n,r;   //Declaramos 3 variables
+    printf("Ingresa el primer numero: ");
+    scanf("%i",&m);  //Leemos el primer numero
+    printf("Ingresa el segundo numero: ");
+    scanf("%i",&n);  //Leemos el segundo numero
+    
+    do
+    {
+        if (m % 2 != 0) { //Si el residuo del primer numero entre 2, es diferente de 0
+            r = r + n; //Entonces, sumamos el valor del segundo numero a nuestra variable auxiliar.
+        }   
+
+        m = m / 2;         //El primer numero lo dividimos entre 2
+        n = n * 2;         //El segundo numero lo multiplicamos por 2
+    } while (m > 0);
+
+    printf("El Resultado es: ");
+    printf("%i",r);  //Imprimimos el resultado
+    return 0;
+}
+
